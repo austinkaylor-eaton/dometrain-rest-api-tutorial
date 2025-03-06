@@ -1,4 +1,6 @@
-﻿namespace Movies.Contracts.Responses;
+﻿using Movies.Domain.Models;
+
+namespace Movies.Contracts.Responses;
 
 /// <summary>
 /// A response containing a Movie.
@@ -32,4 +34,32 @@ public class MovieResponse
     /// All the genres the movie belongs to
     /// </summary>
     public required IEnumerable<string> Genres { get; init; } = [];
+
+    /// <summary>
+    /// An explicit conversion operator that converts a <see cref="Movie"/> to a <see cref="MovieResponse"/>
+    /// </summary>
+    public static explicit operator MovieResponse(Movie movie)
+    {
+        return new MovieResponse
+        {
+            Id = movie.Id,
+            Title = movie.Title,
+            YearOfRelease = movie.YearOfRelease,
+            Genres = movie.Genres
+        };
+    }
+
+    /// <summary>
+    /// An explicit conversion operator that converts a <see cref="MovieResponse"/> to a <see cref="Movie"/>
+    /// </summary>
+    public static explicit operator Movie(MovieResponse response)
+    {
+        return new Movie
+        {
+            Id = response.Id,
+            Title = response.Title,
+            YearOfRelease = response.YearOfRelease,
+            Genres = response.Genres.ToList()
+        };
+    }
 }
