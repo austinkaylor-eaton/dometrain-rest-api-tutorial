@@ -12,7 +12,7 @@ public class Movie
     /// <summary>
     /// The unique identifier of the movie
     /// </summary>
-    public required Guid Id { get; init; }
+    public required Guid Id { get; set; }
 
     /// <summary>
     /// The title of the movie
