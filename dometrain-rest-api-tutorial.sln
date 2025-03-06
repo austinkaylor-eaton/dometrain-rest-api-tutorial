@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api", "Movies.Api\Movies.Api.csproj", "{F1208637-AC4B-480F-866E-2FE093027277}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Application", "Movies.Application\Movies.Application.csproj", "{62408684-EF27-4DD8-8C33-4F690638A0AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,11 +23,16 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{F1208637-AC4B-480F-866E-2FE093027277} = {6516C1D2-F71E-45A7-AFE5-1E3DCE2B2404}
+		{62408684-EF27-4DD8-8C33-4F690638A0AD} = {6516C1D2-F71E-45A7-AFE5-1E3DCE2B2404}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F1208637-AC4B-480F-866E-2FE093027277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1208637-AC4B-480F-866E-2FE093027277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1208637-AC4B-480F-866E-2FE093027277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1208637-AC4B-480F-866E-2FE093027277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62408684-EF27-4DD8-8C33-4F690638A0AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62408684-EF27-4DD8-8C33-4F690638A0AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62408684-EF27-4DD8-8C33-4F690638A0AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62408684-EF27-4DD8-8C33-4F690638A0AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
