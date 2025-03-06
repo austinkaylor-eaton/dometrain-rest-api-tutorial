@@ -1,6 +1,19 @@
-@Movies.Api_HostAddress = http://localhost:5112
+@HostAddress = https://localhost:5001
+@id = f0cd2ef3-eaa3-4e9b-ab5d-8cbaba331c97
 
-GET {{Movies.Api_HostAddress}}/weatherforecast/
+### GET /api/Movies
+GET {{HostAddress}}/api/Movies/{{id}}
 Accept: application/json
 
-###
+### POST /api/Movies
+POST {{HostAddress}}/api/Movies
+Content-Type: application/json
+
+{
+  "Title": "The Shawshank Redemption",
+  "YearOfRelease": "1994",
+  "Genres": [
+    "Drama"
+  ]
+}
+
