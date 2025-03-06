@@ -1,0 +1,12 @@
+﻿### POST /api/Movies
+POST https://localhost:5001/api/Movies
+Content-Type: application/json
+
+{
+  "Title": "The Shawshank Redemption",
+  "YearOfRelease": "1994",
+  "Genres": [
+    "Drama"
+  ]
+}
+###
