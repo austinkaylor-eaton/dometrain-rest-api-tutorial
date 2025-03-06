@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5933EA37
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "resources", "resources", "{6F1A9AD7-766F-43CA-95E6-6DC1C88EBE9E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.Api", "Movies.Api\Movies.Api.csproj", "{F1208637-AC4B-480F-866E-2FE093027277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -16,5 +18,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F1208637-AC4B-480F-866E-2FE093027277} = {6516C1D2-F71E-45A7-AFE5-1E3DCE2B2404}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1208637-AC4B-480F-866E-2FE093027277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1208637-AC4B-480F-866E-2FE093027277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1208637-AC4B-480F-866E-2FE093027277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1208637-AC4B-480F-866E-2FE093027277}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
