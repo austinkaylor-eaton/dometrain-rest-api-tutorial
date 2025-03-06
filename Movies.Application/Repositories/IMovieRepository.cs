@@ -1,4 +1,4 @@
-﻿using Movies.Application.Models;
+﻿using Movies.Domain.Models;
 
 namespace Movies.Application.Repositories;
 
