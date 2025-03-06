@@ -16,7 +16,7 @@ public interface IMovieRepository
     /// <para><see langword="false"/> if the <see cref="Movie"/> could not be added</para>
     /// <para><see langword="false"/> if the <see cref="Movie"/> already exists</para>
     /// </returns>
-    Task<bool> AddMovie(Movie movie);
+    Task<bool> CreateMovieAsync(Movie movie);
 
     /// <summary>
     /// Get all <see cref="Movie"/>s from the repository
@@ -24,7 +24,7 @@ public interface IMovieRepository
     /// <returns>
     /// A collection of <see cref="Movie"/>s
     /// </returns>
-    Task<IEnumerable<Movie>> GetAllMovies();
+    Task<IEnumerable<Movie>> GetAllMoviesAsync();
 
     /// <summary>
     /// Get a <see cref="Movie"/> by its ID from the repository
@@ -34,7 +34,7 @@ public interface IMovieRepository
     /// <para>The <see cref="Movie"/> if it exists</para>
     /// <para><see langword="null"/> if the <see cref="Movie"/> was not found</para>
     /// </returns>
-    Task<Movie?> GetMovieById(Guid id);
+    Task<Movie?> GetMovieByIdAsync(Guid id);
 
     /// <summary>
     /// Update an existing <see cref="Movie"/> in the repository
@@ -45,7 +45,7 @@ public interface IMovieRepository
     /// <para><see langword="false"/> if the <see cref="Movie"/> was not found</para>
     /// <para><see langword="false"/> if the <see cref="Movie"/> could not be updated</para>
     /// </returns>
-    Task<bool> UpdateMovie(Movie movie);
+    Task<bool> UpdateMovieAsync(Movie movie);
 
     /// <summary>
     /// Delete a <see cref="Movie"/> by it's unique identifier from the repository
@@ -56,5 +56,5 @@ public interface IMovieRepository
     /// <para><see langword="false"/> if the <see cref="Movie"/> was not found</para>
     /// <para><see langword="false"/> if the <see cref="Movie"/> could not be deleted</para>
     /// </returns>
-    Task<bool> DeleteMovie(Guid id);
+    Task<bool> DeleteMovieAsync(Guid id);
 }

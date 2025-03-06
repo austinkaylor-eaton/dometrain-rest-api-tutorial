@@ -10,27 +10,27 @@ public class MovieRepository : IMovieRepository
     private readonly List<Movie> _movies = [];
 
     /// <inheritdoc />
-    public Task<bool> AddMovie(Movie movie)
+    public Task<bool> CreateMovieAsync(Movie movie)
     {
         _movies.Add(movie);
         return Task.FromResult(true);
     }
 
     /// <inheritdoc />
-    public Task<IEnumerable<Movie>> GetAllMovies()
+    public Task<IEnumerable<Movie>> GetAllMoviesAsync()
     {
         return Task.FromResult(_movies.AsEnumerable());
     }
 
     /// <inheritdoc />
-    public async Task<Movie?> GetMovieById(Guid id)
+    public async Task<Movie?> GetMovieByIdAsync(Guid id)
     {
         Movie? movie = _movies.SingleOrDefault(m => m.Id == id);
         return await Task.FromResult(movie);
     }
 
     /// <inheritdoc />
-    public Task<bool> UpdateMovie(Movie movie)
+    public Task<bool> UpdateMovieAsync(Movie movie)
     {
         int index = _movies.FindIndex(m => m.Id == movie.Id);
         if (index == -1)
@@ -41,7 +41,7 @@ public class MovieRepository : IMovieRepository
     }
 
     /// <inheritdoc />
-    public Task<bool> DeleteMovie(Guid id)
+    public Task<bool> DeleteMovieAsync(Guid id)
     {
         int moviesDeleted = _movies.RemoveAll(m => m.Id == id);
         return Task.FromResult(moviesDeleted > 0);
