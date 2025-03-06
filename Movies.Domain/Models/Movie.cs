@@ -1,4 +1,4 @@
-﻿namespace Movies.Application.Models;
+﻿namespace Movies.Domain.Models;
 
 /// <summary>
 /// A movie in the application.
